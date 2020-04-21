@@ -1,0 +1,25 @@
+import java.util.Scanner;  // Import the Scanner class
+public class account{
+	int accountno;
+	float amount;
+	String name;
+}
+
+public class sb_account extends account{
+	float interest;
+}
+
+public class current_account extends sb_account{
+	
+}
+public class casestudy1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+	    System.out.println("       Enter account type:");
+	    String account_type = myObj.nextLine();  // Read user input
+	    System.out.println("account type is: " + account_type);  // Output user input
+	}
+
+}

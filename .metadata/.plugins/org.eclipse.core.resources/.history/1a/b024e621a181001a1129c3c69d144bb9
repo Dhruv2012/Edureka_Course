@@ -1,0 +1,89 @@
+
+public class casestudy1 {
+	static double[][] multiply(double a[][], double b[][]){
+		double[][] c = new double[a.length][b[0].length];
+		for(int i =0;i<a.length;i++){
+			for(int j=0;j<b[0].length;j++){
+				for(int k =0; k<b.length;k++) {
+					c[i][j]+= a[i][k]*b[k][j];
+				}
+			}
+		}
+		return c;
+	}
+	
+	static double[][] addition(double a[][], double b[][]){
+		double [][] c = new double[a.length][a[0].length];
+		for(int i=0;i<a.length;i++){
+			for(int j=0;j<a[0].length;j++){
+					c[i][j]= a[i][j] + b[i][j];
+			}
+		}
+		return c;
+	}
+	
+	static double[][] transpose(double a[][]){
+		double [][]c = new double[a[0].length][a.length];
+		for(int i=0;i<a.length;i++) {
+			for(int j=0;j<a[0].length;j++)
+				c[j][i] = a[i][j];
+		}
+		return c;
+	}
+	
+	static int sumofdiagonals(int a[][]){
+		int sum =0;
+		for(int i=0;i<a.length;i++)
+			sum+=a[i][i];
+		return sum;
+	}
+	public static void print2D(int mat[][])		//Printing 2D ARrays 
+    { 
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length; j++) 
+                System.out.print(mat[i][j] + " "); 
+        	System.out.println();
+        }
+    }
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[][]= {{1,1,1},{1,1,1},{1,1,1}};
+		int b[][] = {{2,2,2},{2,2,2},{2,2,2}};
+		int mul[][] = new int[a.length][b[0].length];	 // multiplication result of a and b
+		int add[][] = new int[a.length][a[0].length];	// addition result of a and b
+		int trans[][] = new int[a[0].length][a.length];   // Transpose of A
+		int sum = 0; 									//sum of diagonals of a matrix		
+		
+		if(a[0].length == b.length) { // multiplication is possible as array dimensions match
+			System.out.println("Matrix Multiplication result of a & b is:");
+			mul = multiply(a,b);
+			print2D(mul);  // print multiplication result
+		}
+		else
+			System.out.println("Array dimesions does not match for multiplication");
+		
+		if((a.length == b.length) && (a[0].length == b[0].length)) { // check dimensions before addition of array
+			System.out.println("Matrix Addition result of a & b is:");
+			add = addition(a,b);
+			print2D(add); //print addition results
+		}
+		else
+			System.out.println("Array dimesions does not match for addition");
+		
+		System.out.println("Transpose of A is:");
+		trans = transpose(a); 		// Get transpose of A and print it.
+		print2D(trans);
+		
+		if(a.length == a[0].length) //check if A is square matrix
+			sum = sumofdiagonals(a);
+			System.out.println("Sum of diagonals of the matrix is:" + sum);
+		else
+			System.out.println("Sum of diagonals of the matrix can't be found as it is not a square matrix:");
+	
+		
+	}
+
+}

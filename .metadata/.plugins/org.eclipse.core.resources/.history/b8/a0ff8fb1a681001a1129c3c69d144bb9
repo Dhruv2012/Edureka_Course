@@ -1,0 +1,25 @@
+import java.util.Scanner;  // Import the Scanner class
+public class casestudy2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+	    System.out.println("Enter firstname:");
+	    String firstname = myObj.nextLine();  // Read user input
+	    System.out.println(" Firstname is: " + firstname);  // Output user input
+	    String lastname = myObj.nextLine();
+	    System.out.println(" Lastname is: " + lastname);  // Output user input
+	    String birthdate = myObj.nextLine();
+	    System.out.println(" Birthdate is: " + birthdate);  // Output user input
+	    
+	    String id = ""; 
+	    id = id	+ firstname.charAt(0);
+	    id = id + lastname.charAt(0);
+	    System.out.println(id);
+	    //while()
+	    //id = id.concat(birthdate.charAt(0));
+	    
+	    
+	}
+
+}

@@ -1,0 +1,19 @@
+public class account{
+	int accountno;
+	float amount;
+	String name;
+	public 
+}
+
+public class sb_account extends account{
+	float interest;
+}
+
+public class casestudy1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

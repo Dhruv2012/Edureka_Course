@@ -1,0 +1,45 @@
+
+public class casestudy1 {
+	static int[][] multiply(int a[][], int b[][]){
+		int [][] c = new int[a.length][b[0].length];
+		if(a[0].length == b.length) {
+			for(int i=0;i<a.length;i++){
+				for(int j=0;j<b[0].length;j++){
+					for(int k =0; k<b.length;k++) {
+						c[i][j]+= a[i][k]*b[k][j];
+					}
+					System.out.print(c[i][j]+" ");			
+				}
+				System.out.println();
+			}
+			return c;
+		}
+		else {
+			System.out.println("Multiplication is not posssible as array dimension does not match");
+			return 0;
+		}
+	}
+	
+	public static void print2D(int mat[][])		//Printing 2D ARrays 
+    { 
+        // Loop through all rows 
+        for (int i = 0; i < mat.length; i++) 
+            // Loop through all elements of current row 
+            for (int j = 0; j < mat[i].length; j++) 
+                System.out.print(mat[i][j] + " "); 
+        	System.out.println();
+    }
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[][]= {{1,1,1},{1,1,1},{1,1,1}};
+		int b[][] = {{2,2,2},{2,2,2},{2,2,2}};
+		int mul[][] = new int[a.length][b[0].length];
+		int add[][] = new int[a.length][a[0].length];
+		
+		mul = multiply(a,b);
+		//System.out.println(c[0][0]);
+	}
+
+}

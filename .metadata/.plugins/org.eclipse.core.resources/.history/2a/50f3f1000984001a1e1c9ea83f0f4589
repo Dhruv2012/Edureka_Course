@@ -1,0 +1,12 @@
+import java.util.regex.*;
+import java.util.Scanner;  // Import the Scanner class
+
+public class casestudy1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String valid_id = "dhruv.r.patel14@gmail.com";
+		String invalid_id = "";
+	}
+
+}
