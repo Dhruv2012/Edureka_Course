@@ -1,0 +1,16 @@
+{
+  "name": "json1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "eg.js",
+  "scripts": {
+    "start": "node eg.js",
+    "dev:": "nodemon eg.js",
+    "test": "\"no test specified\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

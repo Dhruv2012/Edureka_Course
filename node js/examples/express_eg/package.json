@@ -1,0 +1,13 @@
+{
+  "name": "express_eg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express1.js",
+  "scripts": {
+    "start": "node express1.js",
+    "dev": "nodemon express1.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
